@@ -1,0 +1,27 @@
+[
+  {
+    "nombre": "oka",
+    "apellido": "Argento",
+    "edad": 27
+  },
+  {
+    "nombre": "koko",
+    "apellido": "Argento",
+    "edad": 20
+  },
+  {
+    "nombre": "mocha",
+    "apellido": "Argento",
+    "edad": 30
+  },
+  {
+    "nombre": "paps",
+    "apellido": "Argento",
+    "edad": 25
+  },
+  {
+    "nombre": "caste",
+    "apellido": "Argento",
+    "edad": 20
+  }
+]

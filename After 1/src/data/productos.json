@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "title": "Smartphone X Pro",
+        "description": "Un smartphone de alta gama con pantalla OLED, cámara de 108 MP y batería de larga duración.",
+        "price": 999.99,
+        "img": "https://example.com/images/smartphone_x_pro.jpg",
+        "code": "SPX12345",
+        "stock": 50
+    },
+    {
+        "id": 2,
+        "title": "Laptop UltraBook",
+        "description": "Laptop ligera y potente, ideal para trabajo y entretenimiento. Con procesador Intel i7 y 16 GB de RAM.",
+        "price": 1299.99,
+        "img": "https://example.com/images/laptop_ultrabook.jpg",
+        "code": "LAP45678",
+        "stock": 30
+    },
+    {
+        "id": 3,
+        "title": "Auriculares Bluetooth",
+        "description": "Auriculares inalámbricos con cancelación de ruido, conexión Bluetooth 5.0 y hasta 20 horas de autonomía.",
+        "price": 199.99,
+        "img": "https://example.com/images/auriculares_bluetooth.jpg",
+        "code": "AUR11223",
+        "stock": 100
+    },
+    {
+        "id": 4,
+        "title": "Reloj Inteligente Sport",
+        "description": "Reloj inteligente con monitor de frecuencia cardíaca, GPS, y resistencia al agua. Ideal para deportes.",
+        "price": 149.99,
+        "img": "https://example.com/images/reloj_inteligente_sport.jpg",
+        "code": "REL99887",
+        "stock": 75
+    },
+    {
+        "id": 5,
+        "title": "Cámara Digital 4K",
+        "description": "Cámara compacta con grabación en 4K, pantalla táctil de 3 pulgadas y conexión Wi-Fi.",
+        "price": 450.00,
+        "img": "https://example.com/images/camara_digital_4k.jpg",
+        "code": "CAM33456",
+        "stock": 20
+    },
+    {
+        "id": 6,
+        "title": "Monitor 4K UltraHD",
+        "description": "Monitor de 27 pulgadas con resolución 4K, ideal para profesionales del diseño gráfico y edición de video.",
+        "price": 599.99,
+        "img": "https://example.com/images/monitor_4k.jpg",
+        "code": "MON98765",
+        "stock": 15
+    },
+    {
+        "id": 7,
+        "title": "Teclado Mecánico RGB",
+        "description": "Teclado mecánico con retroiluminación RGB, ideal para gamers y profesionales de la tecnología.",
+        "price": 129.99,
+        "img": "https://example.com/images/teclado_rgb.jpg",
+        "code": "TEC11234",
+        "stock": 40
+    },
+    {
+        "id": 8,
+        "title": "Cámara Web Full HD",
+        "description": "Cámara web de alta calidad con resolución Full HD y micrófono integrado, perfecta para videoconferencias.",
+        "price": 79.99,
+        "img": "https://example.com/images/camara_web.jpg",
+        "code": "CAM77889",
+        "stock": 60
+    },
+    {
+        "id": 9,
+        "title": "Mochila Antirrobo",
+        "description": "Mochila de diseño moderno con protección antirrobo y compartimientos para laptop y accesorios.",
+        "price": 69.99,
+        "img": "https://example.com/images/mochila_antirrobo.jpg",
+        "code": "MOC22334",
+        "stock": 120
+    },
+    {
+        "id": 10,
+        "title": "Altavoces Bluetooth 360",
+        "description": "Altavoces Bluetooth con sonido envolvente de 360 grados, resistentes al agua y con hasta 12 horas de autonomía.",
+        "price": 149.99,
+        "img": "https://example.com/images/altavoces_bluetooth_360.jpg",
+        "code": "ALT55667",
+        "stock": 85
+    }
+]
