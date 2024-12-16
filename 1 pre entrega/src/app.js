@@ -15,6 +15,10 @@ app.use(express.urlencoded({extended: true}))
 const ProductManager = require("./managers/product-manager.js");
 const manager = new ProductManager("./src/data/productos.json")
 
+// importando el cartManager
+const CartManager = require("./managers/cart-manager.js");
+const cart = new CartManager("./src/data/cart.json")
+
 // rutas
 app.get('/',(req,res)=>{
     res.send("Hola mundo!")
@@ -160,47 +164,51 @@ app.delete("/api/products/:pid", async(req,res)=>{
 
 
 
-
-// INFO DE CARRITO PARA MODULARIZAR DESPUES
-// MODULARIZAR, NO  LO OLVIDES
-let carritoTest = [
-    {
-        "id": 1,
-        "title": "Laptop Apple MacBook Pro 14"
-    },
-    {
-        "id": 2,
-        "title": "Smartphone Samsung Galaxy S23"
-    },
-    {
-        "id": 3,
-        "title": "Auriculares Sony WH-1000XM5"
-    }
-    ]
+// // INFO DE CARRITO PARA MODULARIZAR DESPUES
+// // MODULARIZAR, NO  LO OLVIDES
+// let carritoTest = [
+//     {
+//         "id": 1,
+//         "title": "Laptop Apple MacBook Pro 14"
+//     },
+//     {
+//         "id": 2,
+//         "title": "Smartphone Samsung Galaxy S23"
+//     },
+//     {
+//         "id": 3,
+//         "title": "Auriculares Sony WH-1000XM5"
+//     }
+//     ]
 
 
 // ruteamos lo de carrito
 app.get("/api/carts", async(req,res)=>{
-    // const carrito = await carrito.getProducts();
-    const carrito = carritoTest
+    const carrito = await cart.getProducts();
+    // const carrito = carritoTest
     res.status(200).send({status:'Success',mensaje:'Productos en el carrito  encontrados',carrito})
 })
 
 // ruta de carrito para  id
-app.get("api/carts/:cid", async (req,res)=>{
+app.get("/api/carts/:cid", async (req,res)=>{
     // const carrito = carritoTest
-    console.log('Get de id')
-    res.send(req.params.id)
+    // res.send(req.params.id)
     // const id = req.params.cid;
     // console.log(id);
     // console.log(carrito);
-
-        // NO ESTA  AGARRANDO EL  REQ  PARAMS
-
+    
+    // NO ESTA  AGARRANDO EL  REQ  PARAMS
+    
     // const idCarts = await carrito.getProductById(parseInt(id))
     // otroID = id
     // const idCarts = carrito.otroID
     // res.send(idCarts)
+    // console.log('Get de id')
+    const id = req.params.cid;
+    const idEncontrado = await cart.getProductById(parseInt(id))
+    res.status(200).send({status:'success', idEncontrado})
+    // res.send(idEncontrado)
+    // res.status(200)
 })
 
 // ruta para post
