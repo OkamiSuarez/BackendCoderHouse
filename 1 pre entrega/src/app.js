@@ -63,7 +63,7 @@ app.post("/api/products", async(req,res)=>{
     // console.log(nuevoProducto.status)
     // console.log('productoDestructuring')
     // console.log(productoDestructuring)
-    manager.addProduct('METODO DE nuevoProducto')
+    // manager.addProduct('METODO DE nuevoProducto')
     // productos.push(nuevoProducto)
     // manager.guardarArchivo(productos)
     // OJO el codigo de arriba guarda el  archivo
@@ -213,14 +213,16 @@ app.get("/api/carts/:cid", async (req,res)=>{
 
 // ruta para post
 // SI ID EXISTE, ENTONCES PRODUCTO.QTY  ++
-app.post("api/carts",(req,res)=>{
-    // const productos = await manager.getProducts();
-    const  carrito = carritoTest
+app.post("/api/carts", async(req,res)=>{
+    const productos = await cart.getProducts();
+    // const  carrito = carritoTest
     console.log('request de post')
     const nuevoProducto = req.body;
+    console.log(nuevoProducto)
     // manager.addProduct(nuevoProducto)
-    carrito.push(nuevoProducto)
-    console.log(carrito)
+    // productos.push(nuevoProducto)
+    cart.addProduct(nuevoProducto)
+    console.log(productos)
     res.send('producto agregado')
     // aqui  tampoco esta funcionando, el codigo base  ya  esta entonces  hay que nada mas hacer el filesystem
 })

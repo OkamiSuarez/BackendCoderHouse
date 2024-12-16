@@ -17,8 +17,8 @@ class  CartManager{
         if(!title || !qty){
             console.error('LOS CAMPOS SON OBLIGATORIOS')
             return
-        }else if (arrayProductos.some(item => item.id === id)){
-            return arrayProductos.qty = +1
+        // }else if (arrayProductos.some(item => item.id === id)){
+        //     return arrayProductos.qty = +1
             // return qty+1
         }else{
             const nuevoProducto = {
