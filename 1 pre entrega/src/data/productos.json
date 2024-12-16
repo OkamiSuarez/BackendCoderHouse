@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "title": "Televisor LG OLED 5g5\"",
+    "description": "Televisor OLED 4K dasse 55 pulgadas con soporte HDR y Dolby Vision.",
+    "code": "LG_OLED_55_01",
+    "price": 1299.99,
+    "status": true,
+    "stock": 50,
+    "category": "Electronics",
+    "thumbnails": [
+      "https://example.com/thumbnails/lg_oled_55.jpg"
+    ]
+  }
+]
