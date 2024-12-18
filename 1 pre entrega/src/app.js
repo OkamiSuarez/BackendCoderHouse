@@ -80,7 +80,7 @@ app.post("/api/products", async(req,res)=>{
     }else{
         manager.addProduct(nuevoProducto)
         res.status(200).send({status:'success',mensaje:'Producto agregado'})
-        console.log(productos)
+        // console.log(productos)
     }
 
 })
