@@ -37,7 +37,7 @@ router.post("/", async(req,res)=>{
         res.status(404).send({status:'Failure',mensaje:'Producto no agregado,  STATUS ES OBLIGATORIO'})
     }else{
         manager.addProduct(nuevoProducto)
-        res.status(200).send({status:'success',mensaje:'Producto agregado'})
+        res.status(200).send({status:'success',mensaje:'Producto agregado, en caso de tener un codigo repetido, no se agregara un nuevo producto'})
     }
 
 })

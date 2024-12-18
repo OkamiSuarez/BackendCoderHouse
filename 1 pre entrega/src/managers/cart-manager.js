@@ -42,7 +42,6 @@ class CartManager {
             products: []
         } 
         this.carts.push(nuevoCarrito)
-        
         // se guarda  entonces el array  en el archivo
         await this.guardarCarritos();
         return nuevoCarrito;

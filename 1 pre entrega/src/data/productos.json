@@ -1,34 +1,34 @@
 [
   {
     "id": 2,
-    "title": "Televisor LG OLED 5g5\"",
-    "description": "Televisor OLED 4K dasse 55 pulgadas con soporte HDR y Dolby Vision.",
-    "code": "LG_OLED_55_01",
-    "price": 1299.99,
+    "title": "Laptop Apple MacBook Pro 14",
+    "description": "Laptop de 14 pulgadas con chip M1 Pro, 16GB de RAM y 512GB SSD.",
+    "code": "APPLE_MACBOOK_14_01",
+    "price": 1999.99,
     "status": true,
-    "stock": 50,
+    "stock": 75,
     "category": "Electronics",
     "thumbnails": [
-      "https://example.com/thumbnails/lg_oled_55.jpg"
+      "https://example.com/thumbnails/macbook_pro_14.jpg"
     ]
   },
   {
     "id": 3,
-    "title": "Televisor LG OLED 5g5\"",
-    "description": "Televisor OLED 4K dasse 55 pulgadas con soporte HDR y Dolby Vision.",
-    "code": "LG_OLED_55_01",
-    "price": 1299.99,
+    "title": "Auriculares Sony WH-1000XM5",
+    "description": "Auriculares inalámbricos con cancelación de ruido y batería de 30 horas.",
+    "code": "SONY_WH1000XM5_01",
+    "price": 349.99,
     "status": true,
-    "stock": 50,
+    "stock": 200,
     "category": "Electronics",
     "thumbnails": [
-      "https://example.com/thumbnails/lg_oled_55.jpg"
+      "https://example.com/thumbnails/sony_wh1000xm5.jpg"
     ]
   },
   {
     "id": 4,
-    "title": "Televisor LG OLED 5g5\"",
-    "description": "Televisor OLED 4K dasse 55 pulgadas con soporte HDR y Dolby Vision.",
+    "title": "Televisor LG OLED 55\"",
+    "description": "Televisor OLED 4K de 55 pulgadas con soporte HDR y Dolby Vision.",
     "code": "LG_OLED_55_01",
     "price": 1299.99,
     "status": true,
@@ -88,6 +88,32 @@
     "category": "Electronics",
     "thumbnails": [
       "https://example.com/thumbnails/nikon_d850.jpg"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Frigorífico Samsung 350L",
+    "description": "Frigorífico de 350L con tecnología No Frost y sistema de enfriamiento multi-airflow.",
+    "code": "SAMSUNG_FRIDGE_01",
+    "price": 899.99,
+    "status": true,
+    "stock": 40,
+    "category": "Home Appliances",
+    "thumbnails": [
+      "https://example.com/thumbnails/samsung_fridge.jpg"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Aspiradora Dyson V11",
+    "description": "Aspiradora sin cable con tecnología de succión avanzada y batería de 60 minutos.",
+    "code": "DYSON_V11_01",
+    "price": 599.99,
+    "status": true,
+    "stock": 100,
+    "category": "Home Appliances",
+    "thumbnails": [
+      "https://example.com/thumbnails/dyson_v11.jpg"
     ]
   }
 ]
