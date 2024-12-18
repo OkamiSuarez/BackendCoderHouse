@@ -1,5 +1,6 @@
 // const fs = require('fs').promises
 import {promises as fs} from "fs"
+// ESTE  ERA EL  PROYECTO INICIAL PERO SE AJUSTARA AL DEL AFTER
 
 class  CartManager{
     static ultId = 0
