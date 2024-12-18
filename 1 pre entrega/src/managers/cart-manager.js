@@ -1,4 +1,6 @@
-const fs = require('fs').promises
+// const fs = require('fs').promises
+import {promises as fs} from "fs"
+
 class  CartManager{
     static ultId = 0
 
@@ -6,7 +8,24 @@ class  CartManager{
         this.products = []
         this.path = path
     }
-
+    
+    // funcion para obtener productos
+    async getProducts(){
+        const arrayProductos = await this.leerArchivo()
+        return arrayProductos
+    }
+    // funcion para obtener productos por id
+    async getProductById(id){
+        const arrayProductos = await this.leerArchivo()
+        const producto = arrayProductos.find(producto=>producto.id === id)
+        if (!producto){
+            return null
+        }else{
+            return producto
+        }
+    }
+    // funcion de guardado
+    
     // funcion para agregar un producto 
 //     •	La ruta raíz POST / deberá crear un nuevo carrito con la siguiente estructura:
 // •	Id:Number/String (A tu elección, de igual manera como con los productos, debes asegurar que nunca se dupliquen los ids y que este se autogenere).
@@ -31,24 +50,11 @@ class  CartManager{
             await this.guardarArchivo(arrayProductos)
         }
     }
-
-
-    // funcion para obtener productos
-    async getProducts(){
-        const arrayProductos = await this.leerArchivo()
-        return arrayProductos
+    // Se trabaja el cargar Carrito
+    async cargarCarritos(){
+        
     }
-    // funcion para obtener productos por id
-    async getProductById(id){
-        const arrayProductos = await this.leerArchivo()
-        const producto = arrayProductos.find(producto=>producto.id === id)
-        if (!producto){
-            return 'Product not found'
-        }else{
-            return producto
-        }
-    }
-    // funcion de guardado
+
     async guardarArchivo(arrayProductos){
         try{
             await fs.writeFile(this.path, JSON.stringify(arrayProductos,null,2))
@@ -71,4 +77,5 @@ class  CartManager{
 
 }
 
-module.exports = CartManager
+export default CartManager
+// module.exports = CartManager

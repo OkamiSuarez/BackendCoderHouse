@@ -1,7 +1,8 @@
 // Actividad 2
-const fs = require('fs').promises
+// const fs = require('fs').promises
 // esto de arriba se hace por que se van a usar promesas
-// con ES Modules  es import {promises as fs} from fs
+// con ES Modules  es 
+import {promises as fs} from "fs"
 
 class ProductManager {
 
@@ -91,7 +92,8 @@ class ProductManager {
     }
 }
 
-module.exports = ProductManager
+// module.exports = ProductManager
+export default ProductManager
 
 // // testing
 // // Se creará una instancia de la clase “ProductManager”
