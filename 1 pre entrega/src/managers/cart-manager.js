@@ -40,13 +40,31 @@ class CartManager {
         const nuevoCarrito = {
             id: ++this.ultID,
             products: []
-        }
+        } 
         this.carts.push(nuevoCarrito)
         
         // se guarda  entonces el array  en el archivo
         await this.guardarCarritos();
         return nuevoCarrito;
 }
+
+// ruta para el get de todos los elementos
+    async getCarrito(){
+        const  arrayCarrito = await this.leerArchivo()
+        return arrayCarrito
+    }
+
+    // funcion  para leer el carrito
+    async leerArchivo(){
+        try {
+            const respuesta = await fs.readFile(this.path, 'utf-8')
+            const arrayProductos = JSON.parse(respuesta)
+            return arrayProductos
+        } catch (error) {
+            
+        }
+    }
+
 
     // cargar carritos en el sistema
     async getCarritoById(cartId){

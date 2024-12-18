@@ -15,6 +15,17 @@ router.post("/", async(req,res)=>{
 })
 
 // ruta get
+router.get("/", async(req,res)=>{
+    const products = await manager.getCarrito()
+    let limit = req.query.limit;
+    if (limit){
+        res.send(products.slice(0,limit))
+        console.log('haciendo el query limit')
+    }else{
+        res.send(products)
+    }
+})
+
 // ruta de carrito para  id
 router.get("/:cid", async (req,res)=>{
     const cartId = parseInt(req.params.cid)
