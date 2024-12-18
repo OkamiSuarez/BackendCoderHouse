@@ -36,7 +36,7 @@ class CartManager {
     }
 
     // Metodos de consigna
-    async creatCarrito(){
+    async crearCarrito(){
         const nuevoCarrito = {
             id: ++this.ultID,
             products: []
