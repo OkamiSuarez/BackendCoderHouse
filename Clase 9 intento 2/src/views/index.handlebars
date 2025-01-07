@@ -1,0 +1,23 @@
+<h2> Informacion personal </h2>
+
+<p>Mi nombre es  {{usuario.nombre}} </p>
+<p>Mi apellido es {{usuario.apellido}} </p>
+
+{{!-- se recorre el array y por cada elemento me da una card --}}
+
+{{#each arrayProductos }}
+    <div class="card">
+        <p>Nombre: {{this.nombre}} </p>
+        <p>Descripcion: {{this.descripcion}}</p>
+        <p>Precio: {{this.precio}}</p>
+            <Button>Comprar</Button>
+    </div>
+{{/each }}
+
+{{!-- Usando condicional if --}}
+
+{{#if usuario.mayorEdad}}
+    <p>Es mayor de edad</p>
+{{else}}
+    <p>es menor de edad</p>
+{{/if}}

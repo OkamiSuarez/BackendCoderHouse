@@ -1,0 +1,14 @@
+h1{
+    color:rgb(255, 255, 255);
+    text-align: center;
+}
+body{
+    background-color: gray;
+}
+footer{
+    background-color: rgb(172, 160, 160);
+}
+
+header{
+    background-color: blue;
+}
