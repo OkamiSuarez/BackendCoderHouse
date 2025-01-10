@@ -1,7 +1,7 @@
 const  socket = io()
 
 socket.on("productos",(data)=>{
-    console.log(data)
+    // console.log(data)
     renderProductos(data)
 })
 
@@ -16,10 +16,12 @@ const renderProductos = (productos)  =>{
                         <p> ${item.title} <p>
                         <p> ${item.price} <p>
                         <p> ${item.description} <p>
+                        <p> Stock: ${item.stock} <p>
+
                         <button> Eliminar </button>
                         `
         contenedorProductos.appendChild(card)
-        // Se le  agrega el  boton delete
+        // Se le  agrega el evento del boton delete
         card.querySelector("button").addEventListener("click", ()=>{
             eliminarProducto(item.id);
         })

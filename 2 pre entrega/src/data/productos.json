@@ -1,38 +1,12 @@
 [
   {
-    "id": 2,
-    "title": "Laptop Apple MacBook Pro 14",
-    "description": "Laptop de 14 pulgadas con chip M1 Pro, 16GB de RAM y 512GB SSD.",
-    "code": "APPLE_MACBOOK_14_01",
-    "price": 1999.99,
-    "status": true,
-    "stock": 75,
-    "category": "Electronics",
-    "thumbnails": [
-      "https://example.com/thumbnails/macbook_pro_14.jpg"
-    ]
-  },
-  {
-    "id": 3,
-    "title": "Auriculares Sony WH-1000XM5",
-    "description": "Auriculares inalámbricos con cancelación de ruido y batería de 30 horas.",
-    "code": "SONY_WH1000XM5_01",
-    "price": 349.99,
-    "status": true,
-    "stock": 200,
-    "category": "Electronics",
-    "thumbnails": [
-      "https://example.com/thumbnails/sony_wh1000xm5.jpg"
-    ]
-  },
-  {
     "id": 4,
     "title": "Televisor LG OLED 55\"",
     "description": "Televisor OLED 4K de 55 pulgadas con soporte HDR y Dolby Vision.",
     "code": "LG_OLED_55_01",
     "price": 1299.99,
     "status": true,
-    "stock": 50,
+    "stock": 20,
     "category": "Electronics",
     "thumbnails": [
       "https://example.com/thumbnails/lg_oled_55.jpg"
@@ -45,7 +19,7 @@
     "code": "GARMIN_FENIX7_01",
     "price": 699.99,
     "status": true,
-    "stock": 120,
+    "stock": 114,
     "category": "Electronics",
     "thumbnails": [
       "https://example.com/thumbnails/garmin_fenix7.jpg"
@@ -58,7 +32,7 @@
     "code": "APPLE_IPAD_AIR_01",
     "price": 599.99,
     "status": true,
-    "stock": 180,
+    "stock": 178,
     "category": "Electronics",
     "thumbnails": [
       "https://example.com/thumbnails/ipad_air.jpg"
@@ -123,14 +97,14 @@
     "code": "123456",
     "price": "100",
     "status": true,
-    "stock": "100",
+    "stock": 85,
     "category": "Helados",
     "thumbnails": [
       ""
     ]
   },
   {
-    "id": 1,
+    "id": 123,
     "title": "Helado",
     "description": "De fruta",
     "code": "4567",
@@ -138,6 +112,32 @@
     "status": true,
     "stock": "100",
     "category": "Helados",
+    "thumbnails": [
+      ""
+    ]
+  },
+  {
+    "id": 100,
+    "title": "Producto ",
+    "description": "prueba",
+    "code": "388",
+    "price": "100",
+    "status": true,
+    "stock": 3,
+    "category": "test",
+    "thumbnails": [
+      ""
+    ]
+  },
+  {
+    "id": 1654,
+    "title": "producto2",
+    "description": "prueba",
+    "code": "38249",
+    "price": "8408",
+    "status": true,
+    "stock": "5",
+    "category": "testeo",
     "thumbnails": [
       ""
     ]
