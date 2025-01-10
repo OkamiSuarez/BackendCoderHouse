@@ -1,0 +1,145 @@
+[
+  {
+    "id": 2,
+    "title": "Laptop Apple MacBook Pro 14",
+    "description": "Laptop de 14 pulgadas con chip M1 Pro, 16GB de RAM y 512GB SSD.",
+    "code": "APPLE_MACBOOK_14_01",
+    "price": 1999.99,
+    "status": true,
+    "stock": 75,
+    "category": "Electronics",
+    "thumbnails": [
+      "https://example.com/thumbnails/macbook_pro_14.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Auriculares Sony WH-1000XM5",
+    "description": "Auriculares inalámbricos con cancelación de ruido y batería de 30 horas.",
+    "code": "SONY_WH1000XM5_01",
+    "price": 349.99,
+    "status": true,
+    "stock": 200,
+    "category": "Electronics",
+    "thumbnails": [
+      "https://example.com/thumbnails/sony_wh1000xm5.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Televisor LG OLED 55\"",
+    "description": "Televisor OLED 4K de 55 pulgadas con soporte HDR y Dolby Vision.",
+    "code": "LG_OLED_55_01",
+    "price": 1299.99,
+    "status": true,
+    "stock": 50,
+    "category": "Electronics",
+    "thumbnails": [
+      "https://example.com/thumbnails/lg_oled_55.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Smartwatch Garmin Fenix 7",
+    "description": "Reloj inteligente deportivo con GPS, monitoreo de salud y batería de 18 días.",
+    "code": "GARMIN_FENIX7_01",
+    "price": 699.99,
+    "status": true,
+    "stock": 120,
+    "category": "Electronics",
+    "thumbnails": [
+      "https://example.com/thumbnails/garmin_fenix7.jpg"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Tablet Apple iPad Air 10.9\"",
+    "description": "Tablet con chip A14 Bionic, pantalla Liquid Retina de 10.9 pulgadas.",
+    "code": "APPLE_IPAD_AIR_01",
+    "price": 599.99,
+    "status": true,
+    "stock": 180,
+    "category": "Electronics",
+    "thumbnails": [
+      "https://example.com/thumbnails/ipad_air.jpg"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Consola Sony PlayStation 5",
+    "description": "Consola de videojuegos PlayStation 5 con almacenamiento SSD de 825GB.",
+    "code": "PS5_01",
+    "price": 499.99,
+    "status": true,
+    "stock": 60,
+    "category": "Electronics",
+    "thumbnails": [
+      "https://example.com/thumbnails/ps5.jpg"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Cámara Nikon D850",
+    "description": "Cámara DSLR de 45.7MP con sensor full-frame y video 4K UHD.",
+    "code": "NIKON_D850_01",
+    "price": 2799.99,
+    "status": true,
+    "stock": 30,
+    "category": "Electronics",
+    "thumbnails": [
+      "https://example.com/thumbnails/nikon_d850.jpg"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Frigorífico Samsung 350L",
+    "description": "Frigorífico de 350L con tecnología No Frost y sistema de enfriamiento multi-airflow.",
+    "code": "SAMSUNG_FRIDGE_01",
+    "price": 899.99,
+    "status": true,
+    "stock": 40,
+    "category": "Home Appliances",
+    "thumbnails": [
+      "https://example.com/thumbnails/samsung_fridge.jpg"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Aspiradora Dyson V11",
+    "description": "Aspiradora sin cable con tecnología de succión avanzada y batería de 60 minutos.",
+    "code": "DYSON_V11_01",
+    "price": 599.99,
+    "status": true,
+    "stock": 100,
+    "category": "Home Appliances",
+    "thumbnails": [
+      "https://example.com/thumbnails/dyson_v11.jpg"
+    ]
+  },
+  {
+    "id": 1,
+    "title": "Helado",
+    "description": "De menta granizada",
+    "code": "123456",
+    "price": "100",
+    "status": true,
+    "stock": "100",
+    "category": "Helados",
+    "thumbnails": [
+      ""
+    ]
+  },
+  {
+    "id": 1,
+    "title": "Helado",
+    "description": "De fruta",
+    "code": "4567",
+    "price": "500",
+    "status": true,
+    "stock": "100",
+    "category": "Helados",
+    "thumbnails": [
+      ""
+    ]
+  }
+]
