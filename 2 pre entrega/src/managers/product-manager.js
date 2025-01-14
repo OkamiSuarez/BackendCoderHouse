@@ -29,10 +29,10 @@ class ProductManager {
             console.log('el codigo debe ser unico');
             return;
         } else {
-        
+            const maxId = arrayProductos.reduce((max, product) => Math.max(max, product.id), 0);
         // si pasamos las validaciones se crea el objeto
         const nuevoProducto = {
-            id: ++ProductManager.ultID,
+            id: maxId + 1,
             title,
             description,
             code,
@@ -70,6 +70,60 @@ class ProductManager {
         }
     }
     // Se pueden armar metodos auxiliares que guarden el archivo y recuperen los datos 
+
+
+    async deleteProduct(id){
+        /* 
+            ESTE PRIMER BLOQUE ES PARA QUITAR EL STOCK PERO EL PROFE ME DIJO QUE MEJOR QUITARA TODO EL PRODUCTO ENTOCES VOLVERE A CODEAR
+        */ 
+                    // try {
+                    //     const productos = await this.getProducts();
+                    //     let productIndex = productos.findIndex(producto => producto.id == id)
+                    //         if(productos[productIndex].stock  === 1){
+                    //             productos.splice(productIndex,1);
+                    //             console.log('se tiene que eliminar todo')
+                    //             this.guardarArchivo(productos)
+                    //             // io.sockets.emit("productos", await this.getProducts())
+                    //         }else if(productIndex !== -1){
+                    //             // console.log(productIndex)
+                    //             // console.log(productos[productIndex])
+                    //             // console.log(productos[productIndex].stock)
+                    //             productos[productIndex].stock = productos[productIndex].stock -1
+                    //             // console.log(productos[productIndex].stock)
+                    //             this.guardarArchivo(productos)
+                    //             // io.sockets.emit("productos", await manager.getProducts())
+                    //         }else{
+                    //             console.log('id no encontrado')
+                    //         }
+                    //     // Buscar el elemento por su id
+                    // } catch (error) {
+                    //     console.log(error)
+                    // }
+
+        try {
+            const productos = await this.getProducts();
+            let productIndex = productos.findIndex(producto => producto.id == id)
+                // if(productos[productIndex].stock  === 1){
+                    productos.splice(productIndex,1);
+                    // console.log('se tiene que eliminar todo')
+                    await this.guardarArchivo(productos)
+                    // io.sockets.emit("productos", await this.getProducts())
+                // }else if(productIndex !== -1){
+                    // console.log(productIndex)
+                    // console.log(productos[productIndex])
+                    // console.log(productos[productIndex].stock)
+                    // productos[productIndex].stock = productos[productIndex].stock -1
+                    // console.log(productos[productIndex].stock)
+                    // this.guardarArchivo(productos)
+                    // io.sockets.emit("productos", await manager.getProducts())
+                // }else{
+                    // console.log('id no encontrado')
+                // }
+            // Buscar el elemento por su id
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
     async guardarArchivo (arrayProductos){
         try{

@@ -1,0 +1,74 @@
+[
+    {
+        "nombre": "Ana",
+        "apellido": "Gómez",
+        "email": "ana.gomez@email.com",
+        "genero": "F",
+        "promedio": 7.8,
+        "grupo": "1A"
+    },
+    {
+        "nombre": "Carlos",
+        "apellido": "Martínez",
+        "email": "carlos.martinez@email.com",
+        "genero": "M",
+        "promedio": 5.9,
+        "grupo": "1A"
+    },
+    {
+        "nombre": "Lucía",
+        "apellido": "Rodríguez",
+        "email": "lucia.rodriguez@email.com",
+        "genero": "F",
+        "promedio": 8.3,
+        "grupo": "1A"
+    },
+    {
+        "nombre": "Sergio",
+        "apellido": "Sánchez",
+        "email": "sergio.sanchez@email.com",
+        "genero": "M",
+        "promedio": 7.2,
+        "grupo": "1A"
+    },
+    {
+        "nombre": "Elena",
+        "apellido": "Fernández",
+        "email": "elena.fernandez@email.com",
+        "genero": "F",
+        "promedio": 6.5,
+        "grupo": "1B"
+    },
+    {
+        "nombre": "David",
+        "apellido": "García",
+        "email": "david.garcia@email.com",
+        "genero": "M",
+        "promedio": 7.9,
+        "grupo": "1B"
+    },
+    {
+        "nombre": "Martina",
+        "apellido": "López",
+        "email": "martina.lopez@email.com",
+        "genero": "F",
+        "promedio": 9.0,
+        "grupo": "1B"
+    },
+    {
+        "nombre": "Javier",
+        "apellido": "Torres",
+        "email": "javier.torres@email.com",
+        "genero": "M",
+        "promedio": 6.7,
+        "grupo": "1B"
+    },
+    {
+        "nombre": "Beatriz",
+        "apellido": "Pérez",
+        "email": "beatriz.perez@email.com",
+        "genero": "F",
+        "promedio": 7.3,
+        "grupo": "1B"
+    }
+]

@@ -74,24 +74,37 @@ io.on("connection",async(socket)=>{
                     //         res.status(404).send({status:'Failure',mensaje:'Producto no encontrado'})
                     //     }
                     // })
-        const productos = await manager.getProducts();
-        let productIndex = productos.findIndex(producto => producto.id == id)
-            if(productos[productIndex].stock  === 1){
-                productos.splice(productIndex,1);
-                console.log('se tiene que eliminar todo')
-                manager.guardarArchivo(productos)
-                io.sockets.emit("productos", await manager.getProducts())
-            }else if(productIndex !== -1){
-                // console.log(productIndex)
-                // console.log(productos[productIndex])
-                // console.log(productos[productIndex].stock)
-                productos[productIndex].stock = productos[productIndex].stock -1
-                // console.log(productos[productIndex].stock)
-                manager.guardarArchivo(productos)
-                io.sockets.emit("productos", await manager.getProducts())
-            }else{
-                console.log('id no encontrado')
-            }
 
+
+
+
+        // const productos = await manager.getProducts();
+        // let productIndex = productos.findIndex(producto => producto.id == id)
+        //     if(productos[productIndex].stock  === 1){
+        //         productos.splice(productIndex,1);
+        //         console.log('se tiene que eliminar todo')
+        //         manager.guardarArchivo(productos)
+        //         io.sockets.emit("productos", await manager.getProducts())
+        //     }else if(productIndex !== -1){
+        //         // console.log(productIndex)
+        //         // console.log(productos[productIndex])
+        //         // console.log(productos[productIndex].stock)
+        //         productos[productIndex].stock = productos[productIndex].stock -1
+        //         // console.log(productos[productIndex].stock)
+        //         manager.guardarArchivo(productos)
+        //         io.sockets.emit("productos", await manager.getProducts())
+        //     }else{
+        //         console.log('id no encontrado')
+        //     }
+
+
+
+
+            // no ocupar el stock
+            // llamar al metodo del manager y eliminar directo
+
+
+            await manager.deleteProduct(id)
+            io.sockets.emit("productos", await manager.getProducts())
     })
 })
