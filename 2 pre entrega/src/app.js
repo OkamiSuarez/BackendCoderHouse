@@ -75,9 +75,6 @@ io.on("connection",async(socket)=>{
                     //     }
                     // })
 
-
-
-
         // const productos = await manager.getProducts();
         // let productIndex = productos.findIndex(producto => producto.id == id)
         //     if(productos[productIndex].stock  === 1){
@@ -97,12 +94,8 @@ io.on("connection",async(socket)=>{
         //         console.log('id no encontrado')
         //     }
 
-
-
-
             // no ocupar el stock
             // llamar al metodo del manager y eliminar directo
-
 
             await manager.deleteProduct(id)
             io.sockets.emit("productos", await manager.getProducts())
