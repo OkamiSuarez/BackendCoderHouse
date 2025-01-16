@@ -1,0 +1,93 @@
+[
+    {
+      "id": 1,
+      "nombre": "María González",
+      "edad": 35,
+      "email": "maria.gonzalez@universidad.edu",
+      "departamento": "Ciencias de la Computación",
+      "materias": ["Programación I", "Estructuras de Datos"],
+      "activo": true
+    },
+    {
+      "id": 2,
+      "nombre": "Carlos Rodríguez",
+      "edad": 42,
+      "email": "carlos.rodriguez@universidad.edu",
+      "departamento": "Matemáticas",
+      "materias": ["Cálculo I", "Álgebra Lineal"],
+      "activo": true
+    },
+    {
+      "id": 3,
+      "nombre": "Ana Martínez",
+      "edad": 38,
+      "email": "ana.martinez@universidad.edu",
+      "departamento": "Física",
+      "materias": ["Física Cuántica", "Mecánica Clásica"],
+      "activo": true
+    },
+    {
+      "id": 4,
+      "nombre": "Javier López",
+      "edad": 45,
+      "email": "javier.lopez@universidad.edu",
+      "departamento": "Química",
+      "materias": ["Química Orgánica", "Bioquímica"],
+      "activo": false
+    },
+    {
+      "id": 5,
+      "nombre": "Laura Sánchez",
+      "edad": 33,
+      "email": "laura.sanchez@universidad.edu",
+      "departamento": "Ingeniería Eléctrica",
+      "materias": ["Circuitos Eléctricos", "Electromagnetismo"],
+      "activo": true
+    },
+    {
+      "id": 6,
+      "nombre": "Roberto Fernández",
+      "edad": 50,
+      "email": "roberto.fernandez@universidad.edu",
+      "departamento": "Historia",
+      "materias": ["Historia Contemporánea", "Metodología de la Investigación"],
+      "activo": true
+    },
+    {
+      "id": 7,
+      "nombre": "Elena Torres",
+      "edad": 37,
+      "email": "elena.torres@universidad.edu",
+      "departamento": "Psicología",
+      "materias": ["Psicología Social", "Psicología Clínica"],
+      "activo": true
+    },
+    {
+      "id": 8,
+      "nombre": "Miguel Ángel Pérez",
+      "edad": 41,
+      "email": "miguel.perez@universidad.edu",
+      "departamento": "Economía",
+      "materias": ["Microeconomía", "Macroeconomía"],
+      "activo": false
+    },
+    {
+      "id": 9,
+      "nombre": "Isabel Ramírez",
+      "edad": 39,
+      "email": "isabel.ramirez@universidad.edu",
+      "departamento": "Biología",
+      "materias": ["Genética", "Ecología"],
+      "activo": true
+    },
+    {
+      "id": 10,
+      "nombre": "Alejandro Gómez",
+      "edad": 36,
+      "email": "alejandro.gomez@universidad.edu",
+      "departamento": "Lenguas Extranjeras",
+      "materias": ["Inglés Avanzado", "Lingüística Aplicada"],
+      "activo": true
+    }
+  ]
+  
