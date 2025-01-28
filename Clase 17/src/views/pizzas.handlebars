@@ -1,0 +1,19 @@
+<h1>pizzeria el codigo loco </h1>
+<h2>listado de pizzas vendidas este finde</h2>
+
+<ul>
+    {{#each pizzas}}
+        <li> {{this.nombre}} cantidad: {{this.cantidad}}</li>
+    {{/each}}
+</ul>
+
+{{!-- se arma la interfaz de la paginacion --}}
+{{#if hasPrevPage}}
+    <a href="/pizzas?page={{prevPage}}">Anterior</a>
+{{/if}}
+
+{{#if hasNextPage}}
+    <a href="/pizzas?page"={{hasNextPage}}>Siguiente</a>
+{{/if}}
+
+<p> Pagina {{currentPage}} siguiente {{nextPage}}</p>

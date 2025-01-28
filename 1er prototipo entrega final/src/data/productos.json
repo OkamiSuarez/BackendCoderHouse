@@ -1,0 +1,102 @@
+[
+  {
+      "title": "Smartphone Samsung Galaxy S23",
+      "description": "Latest Samsung flagship with 6.1-inch display and 50MP camera",
+      "code": "SGS23-2023",
+      "price": 999.99,
+      "status": true,
+      "stock": 15,
+      "category": "Smartphones",
+      "thumbnails": ["samsung-s23-front.jpg", "samsung-s23-back.jpg"]
+  },
+  {
+      "title": "Laptop HP Pavilion 15",
+      "description": "15.6-inch laptop with Intel i7, 16GB RAM, 512GB SSD",
+      "code": "HP15-2023",
+      "price": 899.99,
+      "status": true,
+      "stock": 10,
+      "category": "Laptops",
+      "thumbnails": ["hp-pavilion-1.jpg"]
+  },
+  {
+      "title": "Apple AirPods Pro",
+      "description": "Wireless earbuds with active noise cancellation",
+      "code": "APP-2023",
+      "price": 249.99,
+      "status": true,
+      "stock": 25,
+      "category": "Audio",
+      "thumbnails": ["airpods-pro.jpg"]
+  },
+  {
+      "title": "Sony PlayStation 5",
+      "description": "Next-gen gaming console with 4K support",
+      "code": "PS5-2023",
+      "price": 499.99,
+      "status": true,
+      "stock": 8,
+      "category": "Gaming",
+      "thumbnails": ["ps5-console.jpg", "ps5-controller.jpg"]
+  },
+  {
+      "title": "LG 55-inch 4K Smart TV",
+      "description": "4K UHD Smart TV with HDR support",
+      "code": "LG55-2023",
+      "price": 699.99,
+      "status": true,
+      "stock": 12,
+      "category": "TVs",
+      "thumbnails": ["lg-tv-front.jpg"]
+  },
+  {
+      "title": "Nikon D7500 DSLR Camera",
+      "description": "20.9MP DSLR camera with 4K video capability",
+      "code": "NK7500-2023",
+      "price": 1299.99,
+      "status": true,
+      "stock": 6,
+      "category": "Cameras",
+      "thumbnails": ["nikon-d7500.jpg"]
+  },
+  {
+      "title": "Bose QuietComfort 45",
+      "description": "Premium noise-cancelling headphones",
+      "code": "BQC45-2023",
+      "price": 329.99,
+      "status": true,
+      "stock": 20,
+      "category": "Audio",
+      "thumbnails": ["bose-qc45.jpg"]
+  },
+  {
+      "title": "Amazon Kindle Paperwhite",
+      "description": "6.8-inch e-reader with adjustable warm light",
+      "code": "KPW-2023",
+      "price": 139.99,
+      "status": true,
+      "stock": 30,
+      "category": "E-readers",
+      "thumbnails": ["kindle-paperwhite.jpg"]
+  },
+  {
+      "title": "Dyson V11 Vacuum",
+      "description": "Cordless vacuum with advanced filtration",
+      "code": "DV11-2023",
+      "price": 599.99,
+      "status": true,
+      "stock": 15,
+      "category": "Home Appliances",
+      "thumbnails": ["dyson-v11.jpg"]
+  },
+  {
+      "title": "Fitbit Versa 3",
+      "description": "Advanced fitness smartwatch with GPS",
+      "code": "FBV3-2023",
+      "price": 229.99,
+      "status": true,
+      "stock": 18,
+      "category": "Wearables",
+      "thumbnails": ["fitbit-versa3.jpg"]
+  }
+]
