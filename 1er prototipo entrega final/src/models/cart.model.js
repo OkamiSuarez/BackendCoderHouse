@@ -1,11 +1,6 @@
 import mongoose from "mongoose";
 
-const cartSchema = new mongoose.Schema({
-    // id: {
-    //     type: Number,
-    //     required: true,
-    //     unique: true
-    // },
+const cartItemSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true
@@ -15,7 +10,15 @@ const cartSchema = new mongoose.Schema({
         required: true,
         min: 0
     }
-})
+});
+
+const cartSchema = new mongoose.Schema({
+    products: [cartItemSchema],
+    createdAt: {
+        type: Date,
+        default: Date.now
+    }
+});
 
 const cartModel = mongoose.model("carts", cartSchema)
 

@@ -51,3 +51,14 @@ const agregarProducto = () =>{
 
     socket.emit("agregarProducto",producto)
 }
+
+
+// se crea el socket para agregar productos a un carrito 
+// se agregan productos dese el form 
+document.getElementById("btnAgregarCarrito").addEventListener("click", ()=>{
+    agregarProductoAlCarrito();
+})
+
+const agregarProductoAlCarrito= () =>{
+    alert('el boton jala')
+}

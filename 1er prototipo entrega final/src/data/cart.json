@@ -1,22 +1,33 @@
 [
-    {
-        "title": "Smartphone Samsung Galaxy S23",
-        "qty": 2
-    },
-    {
-        "title": "Wireless Bluetooth Headphones",
-        "qty": 1
-    },
-    {
-        "title": "Laptop Dell XPS 13",
-        "qty": 1
-    },
-    {
-        "title": "4K Smart TV LG 55-inch",
-        "qty": 1
-    },
-    {
-        "title": "Nintendo Switch OLED",
-        "qty": 3
-    }
+  {
+    "title": "Smartphone Samsung Galaxy S23",
+    "qty": 2
+  },
+  {
+    "title": "Wireless Bluetooth Headphones",
+    "qty": 1
+  },
+  {
+    "title": "Laptop Dell XPS 13",
+    "qty": 1
+  },
+  {
+    "title": "4K Smart TV LG 55-inch",
+    "qty": 1
+  },
+  {
+    "title": "Nintendo Switch OLED",
+    "qty": 3
+  },
+  {
+    "id": null,
+    "products": []
+  },
+  {
+    "id": null,
+    "products": []
+  },
+  {
+    "products": []
+  }
 ]

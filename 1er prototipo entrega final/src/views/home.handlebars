@@ -1,13 +1,26 @@
-<h1>Mis productos</h1>
+<h1 class="title">Mis productos</h1>
 
 <div class="contenedorCards">
     {{#each productos}}
         <div class="card">
-            <p> {{this.title}} </p>
-            <p> {{this.description}} </p>
-            <p> {{this.price}} </p>
-            <p> Stock :  {{this.stock}} </p>
+            <h2 class="card-title">{{this.title}}</h2>
+            <p class="card-description">{{this.description}}</p>
+            <p class="card-price">Precio: ${{this.price}}</p>
+            <p class="card-stock">Stock: {{this.stock}}</p>
+            <button class="add-to-cart-btn" data-id={{this.id}} id="btnAgregarCarrito">Agregar al carrito</button>
         </div>
 
     {{/each}}
 </div>
+
+{{!-- interfaz de pagina --}}
+
+{{#if hasPrevPage}}
+    <a href="/products?page={{prevPage}}">Anterior</a>
+{{/if}}
+
+{{#if hasNextPage}}
+    <a href="/products?page={{nextPage}}">Siguiente</a>
+{{/if}}
+
+<p> Pagina {{currentPage}} de {{totalPages}}</p>

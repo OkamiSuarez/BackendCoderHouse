@@ -8,7 +8,7 @@ import cartRouter from "./routes/cart.router.js"
 import { engine } from "express-handlebars";
 import { Server } from "socket.io";
 import viewsRouter from "./routes/views.router.js"
-import router from "./routes/product.router.js";
+// import router from "./routes/product.router.js";
 // ultima entrega
 import mongoose from "mongoose";
 import cartModel from "./models/cart.model.js";

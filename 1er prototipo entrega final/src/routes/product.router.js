@@ -5,36 +5,77 @@ const router = Router()
 import productModel from "../models/products.model.js";
 
 // Ruta para listar todos los productos
-router.get("/", async (req,res) =>{
+router.get("/", async (req, res) => {
     try {
-        const getProduct = await productModel.find()
-        
-        // inserto limit
-        let limit = req.query.limit;
-        if (limit){
-            res.send(getProduct.slice(0,limit))
-            console.log('haciendo el query limit')
-        }else{
-            // res.send(getProduct.slice(0,10))
-            res.send(getProduct)
+        let { limit = 10, page = 1, sort, query, category, status } = req.query;
+
+        // parseando los datos recibidos por query
+        limit = parseInt(limit);
+        page = parseInt(page);
+
+        // Paginacion
+        let options = {
+            limit,
+            page,
+            lean: true
+        };
+
+        // Configurar el sort
+        if (sort === 'asc' || sort === 'desc') {
+            options.sort = { price: sort === 'asc' ? 1 : -1 };
         }
-        // res.send(getProduct)
+
+        // Filtro
+        let filter = {};
+        if (query) {
+            filter.$or = [
+                { category: { $regex: query, $options: 'i' } },
+                { title: { $regex: query, $options: 'i' } }
+            ];
+        }
+        if (category) {
+            filter.category = category;
+        }
+        if (status !== undefined) {
+            filter.status = status === 'true';
+        }
+
+        const paginate = await productModel.paginate(filter, options);
+
+        // Validacion revLink y nextLink
+        const baseUrl = `${req.protocol}://${req.get('host')}${req.baseUrl}`;
+        let prevLink = paginate.hasPrevPage ? `${baseUrl}?limit=${limit}&page=${paginate.prevPage}${sort ? `&sort=${sort}` : ''}${query ? `&query=${query}` : ''}${category ? `&category=${category}` : ''}${status !== undefined ? `&status=${status}` : ''}` : null;
+        let nextLink = paginate.hasNextPage ? `${baseUrl}?limit=${limit}&page=${paginate.nextPage}${sort ? `&sort=${sort}` : ''}${query ? `&query=${query}` : ''}${category ? `&category=${category}` : ''}${status !== undefined ? `&status=${status}` : ''}` : null;
+
+        res.send({
+            status: 'success',
+            payload: paginate.docs,
+            totalPages: paginate.totalPages,
+            prevPage: paginate.prevPage,
+            nextPage: paginate.nextPage,
+            page: paginate.page,
+            hasPrevPage: paginate.hasPrevPage,
+            hasNextPage: paginate.hasNextPage,
+            prevLink,
+            nextLink
+        });
+
     } catch (error) {
-        res.status(500).json({mensaje:'Error al obtener el product'})
+        res.status(500).json({ mensaje: 'Error al obtener los productos', error: error.message });
     }
-    // // se guarda el query limit
-    // const productos = await manager.getProducts();
-    // let limit = req.query.limit;
-    //     if (limit){
-    //         res.send(productos.slice(0,limit))
-    //         console.log('haciendo el query limit')
-    //     }else{
-    //         res.send(productos)
-    //     }
-})
+});
 
 // ruta para el id
 router.get("/:pid", async(req,res)=>{
+
+    try {
+        const idProduct = await productModel.findById(req.params.pid)
+        res.send(idProduct)
+    } catch (error) {
+        res.status(500).json({ mensaje: 'Error al obtener el producto por id', error: error.message });
+        
+    }
+
     // const id = req.params.pid
     // const idEncontrado = await manager.getProductById(parseInt(id))
     // res.send(idEncontrado)

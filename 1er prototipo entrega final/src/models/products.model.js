@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+import mongoosePaginate from "mongoose-paginate-v2"
 const productSchema = new mongoose.Schema({
     // id: {
     //     type: Number,
@@ -42,6 +42,9 @@ const productSchema = new mongoose.Schema({
         default: []
     }
 });
+
+// usando el metodo plugin
+productSchema.plugin(mongoosePaginate)
 
 const productModel = mongoose.model("products", productSchema)
 

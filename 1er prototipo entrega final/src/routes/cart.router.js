@@ -1,8 +1,10 @@
 import { Router } from "express";
 const router = Router()
-
+import CartManager from "../managers/cart-manager.js"
+const manager = new CartManager("./src/data/cart.json")
 // IMPORTACION DEL MODEL PARA LA DB
 import cartModel from "../models/cart.model.js";
+import { get } from "http";
 // NUEVA INFORMACION CON MONGODB PARA LA ENTREGA
 // ruta get
 router.get("/", async(req,res)=>{
@@ -14,6 +16,25 @@ router.get("/", async(req,res)=>{
     }
 })
 
+// ruta de carrito para  id
+router.get("/:cid", async (req,res)=>{
+
+    try {
+        const getCart = await cartModel.findById(req.params.cid)
+        res.send(getCart)
+    } catch (error) {
+        res.status(500).send("no se pudo actualizar")
+    }
+
+    // const cartId = parseInt(req.params.cid)
+
+    // try {
+    //     const carritoBuscado = await manager.getCarritoById(cartId);
+    //     res.json(carritoBuscado.products)
+    // } catch (error) {
+    //     res.status(500).json({error:'Error en la existencia de id'})
+    // }
+})
 
 // ruta para post
 router.post("/", async(req,res)=>{
@@ -22,10 +43,24 @@ router.post("/", async(req,res)=>{
     try {
         const addCart = new cartModel(req.body)
         await addCart.save()
-        res.send({mensaje:'Producto agregado al carrito exitosamente',addCart})
+        res.send({mensaje:'Carrito creado exitosamente',addCart})
     } catch (error) {
         res.status(500).json({mensaje:'Error al agregar un producto al carrito'})
     }
+})
+
+// ruta para agregar producto seleccionado
+router.post("/:cid/product/:pid",  async(req,res)=>{
+    const cartId = parseInt(req.params.cid);
+    const productId = req.params.pid;
+    const qty = req.body.qty || 1;
+
+    // try {
+    //     const  actualizarCarrito = await manager.agregarProductoAlCarrito(cartId,productId,qty)
+    //     res.json(actualizarCarrito.products)
+    // } catch (error) {
+    //     res.status(500).json({error:'Error en el agregado de productos'})
+    // }
 })
 
 // ruta put para actualizar por ID
@@ -53,32 +88,8 @@ router.delete("/:id", async(req,res)=>{
     }
 })
 
-// ruta de carrito para  id
-router.get("/:cid", async (req,res)=>{
-    // const cartId = parseInt(req.params.cid)
-
-    // try {
-    //     const carritoBuscado = await manager.getCarritoById(cartId);
-    //     res.json(carritoBuscado.products)
-    // } catch (error) {
-    //     res.status(500).json({error:'Error en la existencia de id'})
-    // }
-})
 
 
-// ruta para agregar producto seleccionado
-router.post("/:cid/product/:pid",  async(req,res)=>{
-    // const cartId = parseInt(req.params.cid);
-    // const productId = req.params.pid;
-    // const qty = req.body.qty || 1;
-
-    // try {
-    //     const  actualizarCarrito = await manager.agregarProductoAlCarrito(cartId,productId,qty)
-    //     res.json(actualizarCarrito.products)
-    // } catch (error) {
-    //     res.status(500).json({error:'Error en el agregado de productos'})
-    // }
-})
 
 export default router
 
